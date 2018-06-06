@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FCC: Product Landing Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (screen.width > 750) $("#navigate").css("height", screen.height * 0.4);
+        if (screen.width > 750) $("#main-doc").css("height", screen.height * 0.81);
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="navigate">
+            <nav id="navbar">
+                <header id="header">HTML Documentation</header>
+                <ul class="list">
+                    <li><a class="nav-link" href="#Getting_started_with_HTML">Getting started with HTML</a></li>
+                    <li><a class="nav-link" href="#What's_in_the_head?_Metadata_in_HTML">What's in the head? Metadata in HTML</a></li>
+                    <li><a class="nav-link" href="#The_basics:_Headings_and_Paragraph">The basics: Headings and Paragraph</a></li>
+                    <li><a class="nav-link" href="#Lists">Lists</a></li>
+                    <li><a class="nav-link" href="#Emphasis_and_Importance">Emphasis and Importance</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <main id="main-doc">
+                <section id="Getting_started_with_HTML" class="main-section">
+                    <header>Getting started with HTML</header>
+                    <p>HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. It can be as complicated or as simple as the web developer wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of the content to make it appear or act a certain way. The enclosing tags can make a bit of content into a hyperlink to link to another page on the web, italicize words, and so on.  For example, take the following line of content:</p>
+
+                    <p class="code"><code> My cat is very grumpy</code></p>
+                    
+                    <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph(<code>&lt;p&gt;</code>)element:</p>
+
+                    <p class="code"><code> &lt;p&gt;My cat is very grumpy&lt;p&gt;</code></p>
+                </section>
+
+                <section id="What's_in_the_head?_Metadata_in_HTML" class="main-section">
+                    <header>What's in the head? Metadata in HTML</header>
+                    <p>The head of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page <code>&lt;title&gt;</code>, links to CSS (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document.) In this article we'll cover all of the above and more, in order to give you a good basis for working with markup.</p>
+
+                    <p>Let's visit this simple HTML document </p>
+                    <p class="code">
+                        <code>&lt;!DOCTYPE html&gt;
+                            &lt;html&gt;
+                            &lt;head&gt;
+                            &lt;meta charset="utf-8"&gt;
+                            &lt;title&gt;My test page&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                            &lt;p&gt;This is my page&lt;/p&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;</code>
+                    </p>
+
+                    <p>The HTML head is the contents of the <code>&lt;head&gt;</code> element — unlike the contents of the <code>&lt;body&gt;</code> element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the page. Instead, the head's job is to contain metadata about the document.</p>
+                </section>
+
+                <section id="The_basics:_Headings_and_Paragraph" class="main-section">
+                    <header>The basics: Headings and Paragraph</header>
+                    <p>Most structured text is comprised of headings and paragraphs, irrespective of whether you are reading a story, a newspaper, a college textbook, a magazine, etc.
+                    </p>
+
+                    <p>In HTML, each paragraph has to be wrapped in a <code>&lt;p&gt;</code> element, like so:</p>
+
+                    <p class="code">
+                        <code>&lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</code>
+                    </p>
+
+                    <p>Each heading has to be wrapped in a heading element:</p>
+
+                    <p class="code">
+                        <code>&lt;h1&gt;I am the title of the story.&lt;h1&gt;</code>
+                    </p>
+                </section>
+
+                <section id="Lists" class="main-section">
+                    <header>Lists</header>
+                    <p>Now let's turn our attention to lists. Lists are everywhere in life — from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! Lists are everywhere on the Web too, and we've got three different types to worry about.</p>
+
+                    <h4>Unordered</h4>
+                    <p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter.</p>
+
+                    <p>Every unordered list starts off with a <code>&lt;ul&gt;</code> element — this wraps around all the list items:</p>
+
+                    <p class="code">
+                        <code>&lt;ul&gt;
+                            milk
+                            eggs
+                            bread
+                        hummus
+                    &lt;/ul&gt;</code>
+                    </p>
+
+                    <p>The last step is to wrap each list item in a <code>&lt;li&gt;</code> (list item) element:</p>
+
+                    <p class="code">
+                        <code>&lt;ul&gt;
+                            &lt;li&gt;milk&lt;/li&gt;
+                            &lt;li&gt;eggs&lt;/li&gt;
+                            &lt;li&gt;bread&lt;/li&gt;
+                        &lt;li&gt;hummus&lt;/li&gt;
+                    &lt;/ul&gt;</code>
+                    </p>
+
+                    <h4>Ordered</h4>
+                    <p>Ordered lists are lists in which the order of the items <em>does</em> matter.</p>
+
+                    <p>The markup structure is the same as for unordered lists, except that you have to wrap the list items in an <code>&lt;ol&gt;</code> element, rather than <code>&lt;ul&gt;</code>:</p>
+
+                    <p class="code">
+                        <code>&lt;ol&gt;
+                            &lt;li&gt;Drive to the end of the road&lt;/li&gt;
+                            &lt;li&gt;Turn right&lt;/li&gt;
+                            &lt;li&gt;Go straight across the first two roundabouts&lt;/li&gt;
+                            &lt;li&gt;Turn left at the third roundabout&lt;/li&gt;
+                        &lt;li&gt;The school is on your right, 300 meters up the road&lt;/li&gt;
+                    &lt;/ol&gt;</code>
+                    </p>
+
+                    <p>Which looks like this:</p>
+
+                    <p>
+                        <ol>
+                            <li>Drive to the end of the road</li>
+                            <li>Turn right</li>
+                            <li>Go straight across the first two roundabouts</li>
+                            <li>Turn left at the third roundabout</li>
+                            <li>The school is on your right, 300 meters up the road</li>
+                        </ol>    
+                    </p>
+
+                </section>
+
+                <section id="Emphasis_and_Importance" class="main-section">
+                    <header>Emphasis and Importance</header>
+                    <p>In human language, we often emphasise certain words to alter the meaning of a sentence, and we often want to mark certain words as important or different in some way. HTML provides various semantic elements to allow us to mark up textual content with such effects, and in this section, we'll look at a few of the most common ones.</p>
+
+                    <h4>Emphasis</h4>
+                    <p>In HTML we use the <code>&lt;em&gt;</code> (emphasis) element to mark up such instances. As well as making the document more interesting to read, these are recognised by screen readers and spoken out in a different tone of voice. Browsers style this as italic by default, but you shouldn't use this tag purely to get italic styling. To do that, you'd use a <code>&lt;span&gt;</code> element and some CSS, or perhaps an <code>&lt;span&gt;</code> element (see below.)</p>
+
+                    <p class="code">
+                        <code>&lt;p&gt;I am &lt;em&gt;glad&lt;/em&gt; you weren't &lt;em&gt;late&lt;/em&gt;.&lt;p&gt;</code>
+                    </p>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
